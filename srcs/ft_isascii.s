@@ -1,14 +1,13 @@
 section .text
-  global ft_isdigit
+  global ft_isascii
 
-ft_isdigit:
-
+ft_isascii:
   cmp rdi, '0'
-  jge checker
+  jge maxascii
   jmp ret_false
 
-checker:
-  cmp rdi, '9'
+maxascii:
+  cmp rdi, '127'
   jle ret_true
   jmp ret_false
 

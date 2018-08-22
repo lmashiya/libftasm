@@ -7,7 +7,7 @@ SRC_DIR = srcs
 INC_DIR = includes
 RM = rm -f
 
-SRCS = ft_bzero.s ft_isalpha.s ft_isdigit.s
+SRCS = ft_bzero.s ft_isalpha.s ft_isdigit.s ft_isascii.s ft_isprint.s ft_isalnum.s
 
 OBJS = $(patsubst %.s, $(OBJ_DIR)/%.o, $(SRCS))
 

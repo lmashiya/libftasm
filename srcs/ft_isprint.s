@@ -1,14 +1,14 @@
 section .text
-  global ft_isdigit
+  global ft_isprint
 
-ft_isdigit:
+ft_isprint:
 
-  cmp rdi, '0'
-  jge checker
+  cmp rdi, ' '
+  jge checkMaxprint
   jmp ret_false
 
-checker:
-  cmp rdi, '9'
+checkMaxprint:
+  cmp rdi, '~'
   jle ret_true
   jmp ret_false
 

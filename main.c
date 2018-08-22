@@ -33,28 +33,120 @@ void check_ft_isalpha()
    int var3 = '\t';
    int var4 = ' ';
 
-   if( ft_isalpha(var1) ) {
+   if( ft_isalpha(var1) )
       printf("var1 = |%c| is an alphabet\n", var1 );
-   } else {
+   else
       printf("var1 = |%c| is not an alphabet\n", var1 );
-   }
-
-   if( ft_isalpha(var2) ) {
+   if( ft_isalpha(var2) )
       printf("var2 = |%c| is an alphabet\n", var2 );
-   } else {
+   else
       printf("var2 = |%c| is not an alphabet\n", var2 );
-   }
-
-   if( ft_isalpha(var3) ) {
+   if( ft_isalpha(var3) )
       printf("var3 = |%c| is an alphabet\n", var3 );
-   } else {
+   else
       printf("var3 = |%c| is not an alphabet\n", var3 );
+   if( ft_isalpha(var4) )
+      printf("var4 = |%c| is an alphabet\n", var4 );
+   else
+      printf("var4 = |%c| is not an alphabet\n", var4 );
+}
+
+void check_isdigit()
+{
+  function("ft_isdigit");
+
+  int var1 = 'd';
+   int var2 = '2';
+   int var3 = '9';
+   int var4 = '+';
+
+   if( ft_isdigit(var1) )
+      printf("var1 = |%c| is a digit\n", var1 );
+   else
+      printf("var1 = |%c| is not a digit\n", var1 );
+   if( ft_isdigit(var2) )
+      printf("var2 = |%c| is a digit\n", var2 );
+   else
+      printf("var2 = |%c| is not a digit\n", var2 );
+   if( ft_isdigit(var3) )
+      printf("var3 = |%c| is a digit\n", var3 );
+   else
+      printf("var3 = |%c| is not a digit\n", var3 );
+   if( ft_isdigit(var4) )
+      printf("var4 = |%c| is a digit\n", var4 );
+   else
+      printf("var4 = |%c| is not a digit\n", var4 );
+}
+
+void check_ft_isascii()
+{
+  function("ft_isascii");
+  char ch = '1';
+  while(ft_isascii(ch))
+  {
+      printf(" Ascii value -------> [%d]\n",ch);
+    ch++;
+  }
+}
+
+void check_ft_isprint()
+{
+  function("ft_isprint");
+
+  int var1 = 'd';
+   int var2 = '\t';
+   int var3 = '9';
+   int var4 = ' ';
+
+   if( ft_isprint(var1) )
+      printf("var1 = |%c| is printable\n", var1 );
+   else
+      printf("var1 = |%c| is not printable\n", var1 );
+   if( ft_isprint(var2) )
+      printf("var2 = |%c| is printable\n", var2 );
+   else
+      printf("var2 = |%c| is not printable\n", var2 );
+   if( ft_isprint(var3) )
+      printf("var3 = |%c| is printable\n", var3 );
+   else
+      printf("var3 = |%c| is not printable\n", var3 );
+   if( ft_isprint(var4) )
+      printf("var4 = |%c| is printable\n", var4 );
+   else
+      printf("var4 = |%c| is not printable\n", var4 );
+}
+
+void check_ft_isalnum()
+{
+  function("ft_isalnum");
+
+  int var1 = 'd';
+   int var2 = '2';
+   int var3 = '\t';
+   int var4 = ' ';
+
+   if( ft_isalnum(var1) ) {
+      printf("var1 = |%c| is alphanumeric\n", var1 );
+   } else {
+      printf("var1 = |%c| is not alphanumeric\n", var1 );
    }
 
-   if( ft_isalpha(var4) ) {
-      printf("var4 = |%c| is an alphabet\n", var4 );
+   if( ft_isalnum(var2) ) {
+      printf("var2 = |%c| is alphanumeric\n", var2 );
    } else {
-      printf("var4 = |%c| is not an alphabet\n", var4 );
+      printf("var2 = |%c| is not alphanumeric\n", var2 );
+   }
+
+   if( ft_isalnum(var3) ) {
+      printf("var3 = |%c| is alphanumeric\n", var3 );
+   } else {
+      printf("var3 = |%c| is not alphanumeric\n", var3 );
+   }
+
+   if( ft_isalnum(var4) ) {
+      printf("var4 = |%c| is alphanumeric\n", var4 );
+   } else {
+      printf("var4 = |%c| is not alphanumeric\n", var4 );
    }
 }
 
@@ -62,5 +154,9 @@ int main()
 {
   check_ft_bzero();
   check_ft_isalpha();
+  check_isdigit();
+  check_ft_isascii();
+  check_ft_isprint();
+  check_ft_isalnum();
   return 0;
 }
