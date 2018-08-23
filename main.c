@@ -210,6 +210,37 @@ void check_ft_strlen()
   printf("Length of |%s| is |%d|\n", str, len);
 }
 
+void check_ft_memset()
+{
+  function("ft_memset");
+
+   char str[] = "This is string.h library function";
+   printf("%s\n", str);
+
+   ft_memset(str,'$',7);
+   printf("%s\n",str );
+}
+
+void check_ft_memcpy()
+{
+  function("ft_memcpy");
+  const char src[50] = "http://www.wethinkcode.co.za";
+   char dest[50] = "Heloooo!!";
+   printf("Before memcpy dest = %s\n", dest);
+   ft_memcpy(dest, src, strlen(src)+1);
+   printf("After memcpy dest = %s\n", dest);
+}
+
+void check_ft_strdup()
+{
+  function("ft_strdup");
+  char *p1 = "Raja";
+  char *p2;
+    p2 = ft_strdup(p1);
+
+    printf("Duplicated string is : %s", p2);
+}
+
 int main()
 {
   check_ft_bzero();
@@ -223,5 +254,8 @@ int main()
   check_ft_puts();
   check_ft_strcat();
   check_ft_strlen();
+  check_ft_memset();
+  check_ft_memcpy();
+  check_ft_strdup();
   return 0;
 }
