@@ -200,6 +200,16 @@ void check_ft_strcat()
 
 }
 
+void check_ft_strlen()
+{
+  function("ft_strlen");
+
+  char str[] = "This is Wethinkcode.co.za";
+  int len;
+  len = ft_strlen(str);
+  printf("Length of |%s| is |%d|\n", str, len);
+}
+
 int main()
 {
   check_ft_bzero();
@@ -212,5 +222,6 @@ int main()
   check_ft_tolower();
   check_ft_puts();
   check_ft_strcat();
+  check_ft_strlen();
   return 0;
 }

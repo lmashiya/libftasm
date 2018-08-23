@@ -14,6 +14,7 @@ int ft_toupper(int c);
 int ft_tolower(int c);
 int ft_puts(const char *s);
 char *ft_strcat(char *restrict s1, const char *restrict s2);
-int ft_strlen(const char *s);
+size_t ft_strlen(const char *s);
+void *memset(void *b, int c, size_t len);
 
 #endif
