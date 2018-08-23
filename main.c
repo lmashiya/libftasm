@@ -150,6 +150,56 @@ void check_ft_isalnum()
    }
 }
 
+void check_ft_toupper()
+{
+  function("ft_toupper");
+
+  int i = -1;
+  char str[] = "We Think Code Is AwesomeNess 123\n";
+  printf("Input String-------->[%s]\n", str );
+
+  while(str[++i])
+    putchar (ft_toupper(str[i]));
+}
+
+void check_ft_tolower()
+{
+  function("ft_tolower");
+
+  int i = -1;
+  char str[] = "WE THINK CODE IS AWASOMENESS\n";
+  printf("Input String-------->[%s]\n", str );
+
+  while(str[++i])
+    putchar (ft_tolower(str[i]));
+}
+
+void check_ft_puts()
+{
+  function("ft_puts");
+
+  char str1[]= "weThinkcode";
+  char str2[]= "Libftsam example";
+
+  ft_puts(str1);
+  ft_puts(str2);
+}
+
+void check_ft_strcat()
+{
+   function("ft_strcat");
+
+   char src[] = "This is source";
+   char dest[] = "This is destination";
+
+   printf("src------->[%s]\n",src );
+   printf("dest------->[%s]\n",dest );
+   ft_strcat(dest, src);
+
+   printf("Final destination string : |%s|\n", dest);
+
+}
+
 int main()
 {
   check_ft_bzero();
@@ -158,5 +208,9 @@ int main()
   check_ft_isascii();
   check_ft_isprint();
   check_ft_isalnum();
+  check_ft_toupper();
+  check_ft_tolower();
+  check_ft_puts();
+  check_ft_strcat();
   return 0;
 }
