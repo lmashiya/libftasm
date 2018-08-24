@@ -2,14 +2,14 @@ section .text
 global ft_strdup
 
 extern  malloc
-extern  ft_strlen
+extern  strlen
 
 ft_strdup:
     cmp     rdi,    0       ; if str is null
     je      ret_null        ; return null
     push    rbx             ; storing str in a non volatile
     mov     rbx,    rdi
-    call    ft_strlen
+    call    strlen
 
 alloc:
     add     rax,    1       ; For the null termination

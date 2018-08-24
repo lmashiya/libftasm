@@ -236,9 +236,18 @@ void check_ft_strdup()
   function("ft_strdup");
   char *p1 = "Raja";
   char *p2;
-    p2 = ft_strdup(p1);
+    p2 = strdup(p1);
 
-    printf("Duplicated string is : %s", p2);
+    printf("Duplicated string is : %s\n", p2);
+
+}
+
+void chaeck_ft_cat()
+{
+  function("ft_cat");
+
+  int fd = open("testfile.txt",O_RDONLY);
+  ft_cat(fd);
 }
 
 int main()
@@ -257,5 +266,7 @@ int main()
   check_ft_memset();
   check_ft_memcpy();
   check_ft_strdup();
+  chaeck_ft_cat();
+  function("end of functions...Thank You For Nothing...LOL");
   return 0;
 }
